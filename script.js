@@ -1,34 +1,47 @@
 'use strict';
 
-const randomNum = Math.floor(Math.random() * 100 + 1);
-console.log(randomNum);
+let number;
+
+const isNumber = function(n){
+    return !isNaN(parseFloat(n)) && isFinite(n);
+};
 
 
-  
-    function tryToWin() {
-        let number; 
-
-        function checkNumber() {
-            number = prompt('Угадай число от 1 до 100'); 
-            if (number === ' ' || number === null || isNaN(number)) {
-                alert ('Это не число!!!');
-                console.log(number);
-            } else {
-                return 0;
-            }
-            return checkNumber();
-         }
-         checkNumber();
+const start = function() {
+    do 
+    {
+        number = prompt('Угадай число от 1 до 100');
+    }
+    while (!isNumber(number));
+};
 
 
-        if (number > randomNum) {
-            alert ('Загаданное число меньше');
-        } else if (number < randomNum) {
-            alert ('Загаданное число больше');
-        } else {
-            alert ('Поздравляю, Вы угадали!!!');
-            return 0;
-        }
-        return tryToWin();
-     }
-     tryToWin();
+function one() {
+    const randomNum = Math.floor(Math.random() * 100 + 1);
+    console.log(randomNum);
+function tryto(){
+function tryToWin() {
+    
+    
+start();
+function two(number) {
+    if (number > randomNum) {
+        alert ('Загаданное число меньше');
+    } else if (number < randomNum) {
+        alert ('Загаданное число больше');
+    } else {
+        alert ('Поздравляю, Вы угадали!!!');
+        return 0;
+    }
+        return randomNum, number;
+    }
+
+    console.dir(two);
+    console.log(number);
+    return two (number);
+    
+}
+tryToWin();
+return tryto();
+} tryto();
+} one();

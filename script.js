@@ -11,30 +11,30 @@ const start = function() {
     {
         number = prompt('Угадай число от 1 до 100');
     }
-    while (!isNumber(number));
+    while (!isNumber(number) || number>100);
 };
 
 
-function one() {
+function mainFunc() {
     const randomNum = Math.floor(Math.random() * 100 + 1);
     console.log(randomNum);
 
 
-    function two() {
+    function checkPrompt() {
         start();
             
         if (number > randomNum) {
             alert ('Загаданное число меньше');
-            return two();
+            return checkPrompt();
         } else if (number < randomNum) {
             alert ('Загаданное число больше');
-            return two();
+            return checkPrompt();
         } else {
         return alert ('Поздравляю, Вы угадали!!!');
         }
        
     }
-    console.dir(two);
-    return two(number);
+    console.dir(checkPrompt);
+    return checkPrompt(number);
 } 
-one();
+mainFunc();
